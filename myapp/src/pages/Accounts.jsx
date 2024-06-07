@@ -7,6 +7,7 @@ import Button from "@mui/material/Button"
 import AddAccountForm from "../components/AddAccountForm"
 import DeleteAccount from "../components/DeleteAccount"
 import { StudentsContextProvider } from "../context/StudentsContext"
+const API_URL = import.meta.env.VITE_API_URL
 
 //gardes
 const columns = [
@@ -79,7 +80,8 @@ export default function Accounts() {
 }
 
 export const accountesLoader = async () => {
-  const res = await fetch("http://localhost:5000/api/students/")
+  console.log(API_URL)
+  const res = await fetch(API_URL + "/api/students/")
   if (!res.ok) {
     throw Error("Faild To Find Data")
   }
@@ -87,7 +89,8 @@ export const accountesLoader = async () => {
 }
 
 export const accountDetailsLoader = async (id) => {
-  const res = await fetch("http://localhost:5000/api/students/codE/" + id)
+  console.log(API_URL + "/api/students/codE/" + id)
+  const res = await fetch(API_URL + "/api/students/codE/" + id)
   if (!res.ok) {
     throw Error("Could Not find that student")
   }

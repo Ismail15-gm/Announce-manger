@@ -3,8 +3,10 @@ import Input from "@mui/joy/Input"
 import Button from "@mui/material/Button"
 import Select from "@mui/material/Select"
 import MenuItem from "@mui/material/MenuItem"
+const API_URL=import.meta.env.VITE_API_URL
 
 export default function AddAnnounce() {
+  
   const [description, setDescription] = useState("")
   const [maker, setMaker] = useState("")
   const [year, setYear] = useState("")
@@ -13,13 +15,14 @@ export default function AddAnnounce() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log(API_URL)
     const student = {
       description,
       maker,
       year,
       filier,
     }
-    const response = await fetch("http://localhost:5000/api/announces", {
+    const response = await fetch(API_URL+"/api/announces", {
       method: "POST",
       body: JSON.stringify(student),
       headers: { "Content-Type": "application/json" },

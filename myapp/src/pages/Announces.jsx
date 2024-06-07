@@ -3,15 +3,16 @@ import { Link, useLoaderData } from "react-router-dom"
 import "../styles/announces.css"
 import Button from "@mui/material/Button"
 
+const API_URL=import.meta.env.VITE_API_URL
 export default function Announces() {
+ 
   const announces = useLoaderData()
-
   async function handleAccept(id) {
     const formData = {
       isValideAdmin: true,
     }
     console.log("Accepting announcement with ID:", id)
-    const response = await fetch("http://localhost:5000/api/announces/" + id, {
+    const response = await fetch(API_URL+"/api/announces/" + id, {
       method: "PATCH",
       body: JSON.stringify(formData),
       headers: {
@@ -30,7 +31,7 @@ export default function Announces() {
 
   async function handleReject(id) {
     console.log("Rejecting announcement with ID:", id)
-    const response = await fetch("http://localhost:5000/api/announces/" + id, {
+    const response = await fetch(API_URL+"/api/announces/" + id, {
       method: "DELETE",
     })
     const json = await response.json()
@@ -41,7 +42,7 @@ export default function Announces() {
       alert("Something Went Wrong")
     }
   }
-
+  
   return (
     <div className="careers">
       {announces.length === 0 ? ( 
@@ -80,7 +81,7 @@ export default function Announces() {
 
 export const announcestesLoader = async () => {
   const res = await fetch(
-    "http://localhost:5000/api/announces/isValideAdmin/false"
+    API_URL+"/api/announces/isValideAdmin/false"
   )
   if (!res.ok) {
     throw Error("Failed To Find Data")

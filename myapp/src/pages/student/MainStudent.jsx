@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "../../styles/announces.css"
+const API_URL=import.meta.env.VITE_API_URL
 
 export default function MainStudent() {
   const [announces, setAnnounces] = useState([])
@@ -7,8 +8,9 @@ export default function MainStudent() {
   useEffect(() => {
     const fetchAnnounces = async () => {
       try {
+        console.log(API_URL)
         const res = await fetch(
-          "http://localhost:5000/api/announces/isValideAdmin/true"
+          API_URL+"/api/announces/isValideAdmin/true"
         )
         if (!res.ok) {
           throw new Error("Failed To Find Data")

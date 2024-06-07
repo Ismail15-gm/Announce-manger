@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "../../styles/announces.css"
+const API_URL=import.meta.env.VITE_API_URL
 
 
 export default function Pendings() {
@@ -8,7 +9,7 @@ export default function Pendings() {
   useEffect(() => {
     const fetchAnnounces = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/announces")
+        const res = await fetch(API_URL+"/api/announces")
         if (!res.ok) {
           throw new Error("Failed To Find Data")
         }

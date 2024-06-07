@@ -14,7 +14,10 @@ import { NavLink } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
+const API_URL=import.meta.env.VITE_API_URL
 function Login() {
+  
+  
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
   function redirectMe(role) {
@@ -39,7 +42,7 @@ function Login() {
     let role = ""
     try {
       const res = await fetch(
-        "http://localhost:5000/api/students/email/" + email
+        API_URL+"/api/students/email/" + email
       )
       if (!res.ok) {
         alert("Invalide Email")
