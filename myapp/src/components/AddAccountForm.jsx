@@ -3,7 +3,7 @@ import Input from "@mui/joy/Input"
 import Button from "@mui/material/Button"
 import Select from "@mui/material/Select"
 import MenuItem from "@mui/material/MenuItem"
-
+const API_URL = import.meta.env.VITE_API_URL
 function AddAccountForm() {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
@@ -14,7 +14,7 @@ function AddAccountForm() {
   const [field, setFiled] = useState("")
   const [error, setError] = useState(null)
   const [role, setRole] = useState("")
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
     const student = {
@@ -27,7 +27,7 @@ function AddAccountForm() {
       field,
       role,
     }
-    const response = await fetch("http://localhost:5000/api/students", {
+    const response = await fetch(API_URL+"/api/students", {
       method: "POST",
       body: JSON.stringify(student),
       headers: { "Content-Type": "application/json" },

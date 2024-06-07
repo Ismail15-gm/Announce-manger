@@ -2,7 +2,7 @@ import Input from "@mui/joy/Input"
 import "../styles/accountes.css"
 import Button from "@mui/material/Button"
 import React, { useState } from "react"
-
+const API_URL = import.meta.env.VITE_API_URL
 export default function DeleteAccount() {
   const [accountSearch, setAccountSearch] = useState({
     codE: "",
@@ -47,18 +47,20 @@ export default function DeleteAccount() {
 
   async function handlDelete() {
     console.log(accountSearch.id)
-    const response = await fetch("http://localhost:5000/api/students/codE/" + accountSearch.codE, {
-      method: "DELETE",
-    })
+    const response = await fetch(
+      API_URL + "/api/students/codE/" + accountSearch.codE,
+      {
+        method: "DELETE",
+      }
+    )
     const json = await response.json()
     if (response.ok) {
       alert("Account deleted")
       handlCancel()
-      window.location.reload();
-    }else{
+      window.location.reload()
+    } else {
       alert("Something Went Wrong")
     }
-
   }
 
   return (
@@ -93,7 +95,7 @@ export default function DeleteAccount() {
 }
 
 export const accountDetailsLoader = async (id) => {
-  const res = await fetch("http://localhost:5000/api/students/codE/" + id)
+  const res = await fetch(API_URL + "/api/students/codE/" + id)
   if (!res.ok) {
     throw Error("Could Not find that student")
   }
