@@ -9,6 +9,9 @@ const announceRoutes = require("./routes/announces")
 
 const app = express()
 
+app.get("/",(req,res)=>{
+  res.json("Hello Me")
+})
 
 mongoose
   .connect(process.env.MONGO_UI)
