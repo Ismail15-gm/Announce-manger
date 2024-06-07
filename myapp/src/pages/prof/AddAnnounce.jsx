@@ -42,7 +42,7 @@ export default function AddAnnounce() {
       setFilier("")
       setError(null) // Clear error if there was any
       alert("Announce Is on Quee now")
-      window.location.reload()
+      
     }
   }
 
