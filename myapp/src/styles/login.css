@@ -1,0 +1,23 @@
+:root{
+  outline: none;
+}
+
+.customInput {
+  width: 15rem;
+}
+
+.main-container {
+  background-color: white;
+  height: 30em;
+  width: 30em;
+  border-radius: 20px;
+  align-items: center;
+  padding-top: 6vh;
+  row-gap: 15px;
+}
+
+img {
+  width: 300px;
+  padding-bottom: 3em;
+}
+

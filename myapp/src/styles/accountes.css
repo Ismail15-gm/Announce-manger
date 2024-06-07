@@ -1,0 +1,102 @@
+
+main{
+  padding: 0;
+  margin: 0;
+}
+
+.accounts-container{
+ display: flex;
+ flex-direction: row;
+ column-gap: 20px ;
+ flex-wrap: wrap;
+}
+
+.delete-container{
+  box-shadow: rgba(0, 0, 0, 0.671) 0px 5px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.592);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-container{
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.671) 0px 5px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.592);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.table-container{
+  width: 75vw;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.671) 0px 5px 15px;
+}
+
+
+/*-----------------------------------------*/
+
+.table{
+  width: 100%;
+  background-color:#bab1b1f0;
+  
+}
+
+.delete-container > h1,button{
+  color: rgb(255, 250, 250);
+}
+
+
+.find-me{
+  margin-top: 20px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.custom-cell-class{
+  color: black;
+}
+
+.account-found{
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  padding: 10px;
+  
+  background-color: rgba(248, 232, 232, 0.592);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 10px;
+  align-items: start;
+
+  border: 1px solid;
+  color: white;
+  background-color: #252b3e;
+  box-shadow: rgba(0, 0, 0, 0.671) 0px 5px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 20px;
+  transition: box-shadow 0.5s ease;
+}
+
+.account-found:hover{
+  box-shadow: rgba(152, 36, 36, 0.671) 0px 5px 15px;
+  transition: box-shadow 0.2s ease;
+  
+}
+

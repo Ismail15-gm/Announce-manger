@@ -1,0 +1,130 @@
+.announce-card {
+  border: 1px solid;
+  color: white;
+  background-color: #252b3e;
+  box-shadow: rgba(0, 0, 0, 0.671) 0px 5px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 25vw;
+  min-width: 200px;
+}
+
+.announce-card .bottom-part {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.careers {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 20px;
+  margin-left: 70px;
+}
+
+body {
+  padding: 0px;
+}
+
+
+
+.confirmed {
+  background-color: rgb(16, 213, 49);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/*  */
+
+.pending {
+  background-color: rgb(15, 63, 147);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.announce-maker{
+  font-weight: bolder;
+ color: whitesmoke;
+  font-size: 25px;
+}
+
+textarea{
+  min-height: 167px;
+  min-width: 641px;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  max-width: 700px;
+  max-height: 200px;
+}
+
+.announce-date{
+  font-weight: bolder;
+  border: 2px solid rgb(183, 176, 176);
+  display:inline-block;
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+
+.Fid {
+  background-color: rgb(215, 36, 36);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.elec {
+  background-color: rgb(227, 221, 32);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+}
+.gee {
+  background-color: rgb(36, 155, 56);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.info {
+  background-color: rgb(41, 211, 208);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.indus{
+  background-color: rgb(91, 33, 146);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.mecanique{
+  background-color: rgb(15, 3, 27);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.btb{
+  background-color: rgb(66, 31, 31);
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 0px;
+  display: inline-block;
+}
